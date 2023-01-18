@@ -190,3 +190,8 @@ header nav ul li a:hover {
 #toggle:checked+label.toggle-btn .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+
+
+.padding-contain{
+    padding: 50px 50px;
+}
