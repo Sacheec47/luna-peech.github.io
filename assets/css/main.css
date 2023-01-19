@@ -275,7 +275,7 @@ header nav ul li a:hover {
     left: 0;
   }
 
-  .caption {
+  .caption-card {
     position: absolute;
     left: 0;
     top: 50%;
@@ -284,7 +284,7 @@ header nav ul li a:hover {
     color: #000;
   }
   
-  .caption span.border {
+  .caption-card span.border {
     background-color: #111;
     color: #fff;
     padding: 18px;
