@@ -178,8 +178,39 @@
     <div class="container-fluid mx-auto" style="max-height: 90vh; max-width: 100vh; max-height: 500px;">
       <!-- <div class="container-fluid"> -->
 
-        
-        
+      <section id="contact">
+        <section>
+          <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com"
+            target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="fields">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="entry.811665510" id="name" placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="entry.909384532" id="email"
+                  placeholder="name@example.com" />
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="message">Example textarea</label>
+              <textarea class="form-control" name="entry.2137563631" id="message" rows="6"></textarea>
+            </div>
+            <input type="submit" value="Send Message" class="primary" />
+            <input type="reset" value="Clear" />
+
+            <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        </section>
+      </section>
+
+
+
 
       <!-- <ul class="actions">
 								<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -191,49 +222,16 @@
 							onload="if(submitted) {}"></iframe> -->
     </div>
   </div>
-  <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/14lh6MIQOy9j3jWzEl7BysxEe4p9OoU9WN3tytbQjj1I/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-    First name:<br>
-    <input type="text" name="entry.810989529" id="entry.810989529"><br>
-    Last name:<br>
-    <input type="text" name="entry.463380756" id="entry.463380756">
-    <input type="submit" value="Submit">
-  </form>
-  
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-  <div class="container"><div id="myId" class="d-none">Foobar</div>
-  sdfsd</div>
-
-  <button class="button primary" id="buy" style="text-decoration:none;" type="button">Review and confirm</button>
-
-<div class="modal-bootstrap fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
-    <!-- modal contents -->
-</div>
-
-<script type="text/javascript">
-$("#buy").click(function () {
-    var a = 4;
-    if (a == 5) {
-        alert("if");
-        $('#myModal').modal('show');
-    } else {
-        alert("else");
-        $('#myModal').modal('hide');
-    }
-});
-</script>
-
-  <!-- Scripts -->
 
   <script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $("#myId").addClass('hidden');
-  $('#gform').prepend('Your submission has been processed...');
-  });
-</script>
+  <script type="text/javascript">var submitted = false;</script>
+  <script type="text/javascript">
+    $('#contactform').on('submit', function (e) {
+      $('#contactform *').fadeOut(2000);
+      $('#contactform').prepend('Your submission has been processed');
+    });
+  </script>
 
 
 

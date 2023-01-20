@@ -15,7 +15,7 @@ html {
 
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/homepage_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.226)), url("../../images/homepage_banner.jpg");
     height: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,6 +33,7 @@ html {
 }
 
 .hero-text button {
+  
     border: none;
     outline: 0;
     display: inline-block;
@@ -327,3 +328,5 @@ header nav ul li a:hover {
   h1,h2,h3{
     text-transform:uppercase;
   }
+
+  
