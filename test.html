@@ -1,127 +1,487 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kirang+Haerang&family=Lobster&display=swap" rel="stylesheet">
-  <title>Hero Section with Social Media Icons || Learningrobo</title>
-  <script src="https://kit.fontawesome.com/c39c442009.js" crossorigin="anonymous"></script>
-<style>
+  <title>Home | Luna Peech </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-.full{
-  width: 100%;
-  height: 100vh;
-  background-image: url("https://cdn.pixabay.com/photo/2017/05/07/19/32/strawberry-2293337_960_720.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-span{
-  font-size: 50px;
-  font-family: 'Courgette', cursive;
-  color: white;
-  cursor: pointer;
-  float: left;
-  padding: 30px 0 0 50px;
-}
-button{
-  color: #fbfcfd;
-  padding: 10px 25px;
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  outline: none;
-  cursor: pointer;
-}
-button:hover{
-  background: #fbfcfd;
-  color: #000;
-}
-.navbar button{
-  float: right;
-  margin-top: 30px;
-  margin-right: 55px;
-}
-.content{
-  color: #fbfcfd;
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-h1{
-  font-size: 80px;
-  margin: 10px 0 30px;
-  line-height: 80px;
-}
-small{
-  font-size: 25px;
-}
-.side-bar{
-  width: 50px;
-  height: 100vh;
-  background: #fbfcfd;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.fa-bars{
-  display: block;
-  width: 100px;
-  margin: 40px 15px auto;
-  cursor: pointer;
-  font-size: 25px;
-  color: #000;
-}
-.social-links i, .useful-links i{
-  width: 25px;
-  margin: 5px auto;
-  cursor: pointer;
-  color: #000;
-  font-size: 25px;
-}
-.social-links{
-  width: 50px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+
+  <style>
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+
+    /* .container-fluid {
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto
+    } */
 
 
-</style>
+    /* .card-img-top:hover {
+      background-color: #ccc;
+    } */
+  </style>
+
 
 </head>
-<body>
-  <div class="full">
-    <div class="navbar">
-      <span>Learning Robo</span>
-      <button type="button"><b>Sign Up</b></button>
-      <button type="button"><b>Log In</b></button>
-    </div>
+
+<body class="body bg-dark">
+  <!-- <div class="container-fluid"></div> -->
+
+  <header>
+    <input type='checkbox' id='toggle' style='display:none;' />
+    <label class='toggle-btn toggle-btn__cross' for='toggle'>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#catogries">Categories</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <main>
+  <div class='wrap'>
+    <div class='title'>PureCSS fullscreen menu</div>
     <div class="content">
-      <small>Welcome to</small>
-      <h1>Learning<br> Robo</h1>
-      <button type="button"><b>View our Blog</b></button>
-    </div>
-    <div class="side-bar">
-      <i class="fas fa-bars"></i>
-      <div class="social-links">
-        <i class="fab fa-git"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-      </div>
+      Hellloo from the other Siiiiidddddeeeeee......<br />
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, minus, laudantium voluptatibus officiis quae eaque minima soluta perspiciatis, necessitatibus vitae harum cum mollitia. Illo corporis dolor obcaecati, quam tenetur officiis.    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, minus, laudantium voluptatibus officiis quae eaque minima soluta perspiciatis, necessitatibus vitae harum cum mollitia. Illo corporis dolor obcaecati, quam tenetur officiis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, minus, laudantium voluptatibus officiis quae eaque minima soluta perspiciatis, necessitatibus vitae harum cum mollitia. Illo corporis dolor obcaecati, quam tenetur officiis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, minus, laudantium voluptatibus officiis quae eaque minima soluta perspiciatis, necessitatibus vitae harum cum mollitia. Illo corporis dolor obcaecati, quam tenetur officiis.
     </div>
   </div>
+</main>    -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:60px">Luna Peech</h1>
+      <!-- <p>Content creator</p>
+      <a href="#about-me" class="btn41-43 btn-41">
+        Button
+      </a> -->
+      <!-- <button class="button-1 ">View More</button> -->
+    </div>
+  </div>
+
+
+
+
+  <!-- About me -->
+
+  <!-- <div class="row">
+      <div class="row featurette" style="padding: 50px 50px;">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">About Me <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+            semper.
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+          </p>
+        </div>
+
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            alt="Generic placeholder image" src="images/about me.jpg" height="400vh">
+        </div>
+
+      </div>
+    </div> -->
+
+  <!-- Banner Title -->
+
+  <!-- <div class="row featurette">
+    <div class="col-md-10">
+      <h2 class="featurette-heading">About Me <span class="text-muted">It'll blow your mind.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+        semper.
+        Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      </p>
+    </div>
+    <div class="col-md-2">
+      <img src="images/about me.jpg" class="card-img" alt="..." style="object-fit: cover;">
+    </div>
+  </div> -->
+
+  <!-- About me -->
+  <!-- <section id="about-me">
+    <div class="jumbotron jumbotron-fluid p-3 p-md-5 text-white bg-dark" style="margin-bottom:0;">
+      <div class="col-md-12">
+        <h1 class="display-4 font-italic">A Topic<br>
+          <span class="text-muted">It'll blow your mind.</span>
+        </h1>
+        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+          about what's most interesting in this post's contents. Multiple lines of text that form the lede, informing
+          new
+          readers quickly and efficiently
+          about what's most interesting in this post's contents. Multiple lines of text that form the lede, informing
+          new
+          readers quickly and efficiently
+          about what's most interesting in this post's contents. Multiple lines of text that form the lede, informing
+          new
+          readers quickly and efficiently
+          about what's most interesting in this post's contents.</p>
+        <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+      </div>
+
+    </div>
+  </section> -->
+  <!-- A Banner -->
+
+  <div class="container">
+
+    <section id="catogries">
+
+      <!-- <hr class="divider" style="max-width: 150vh; padding: 50px 0px;"> -->
+      <div class="row align-items-center mx-auto">
+        <div class="col-md dropdown-divider"></div>
+        <div class="col-auto">
+          <h1 style="color: #6c757d;">Categories</h2>
+        </div>
+        <div class="col-md dropdown-divider"></div>
+      </div>
+
+      <div class="card-deck mx-auto">
+        <!-- <div class="card-deck mx-auto" style="max-height: 90vh; max-width: 150vh; max-height: 500px;"> -->
+
+
+
+        <div class="card">
+          <a href="https://www.google.com/">
+            <img class="card-img-top" src="images/lifestyle.jpeg" alt="Card image cap" style=" object-fit: cover;">
+            <div class="caption-card" style="max-width: 100%;">
+              <span class="border">Life Style</span>
+            </div>
+
+            <div class="card-body text-center carousel-caption">
+              <h4 class="card-title">
+                <!-- <a class="bn47" >Button</a> -->
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="card">
+          <a href="https://www.google.com/">
+            <img class="card-img-top" src="images/about me.jpg" alt="Card image cap"
+              style="width: 100%; object-fit: cover;">
+            <div class="caption-card">
+              <span class="border">Beauty</span>
+            </div>
+
+            <div class="card-body text-center carousel-caption">
+              <h4 class="card-title">
+                
+              </h4>
+            </div>
+          </a>
+        </div> -->
+        <div class="card">
+          <a href="https://www.google.com/">
+            <img class="card-img-top" src="images/beauty.jpeg" alt="Card image cap"
+              style="width: 100%; object-fit: cover;">
+            <div class="caption-card">
+              <span class="border">Beauty</span>
+            </div>
+
+            <div class="card-body text-center carousel-caption">
+              <h4 class="card-title">
+                <!-- <a class="bn47" >Button</a> -->
+              </h4>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.google.com/">
+            <img class="card-img-top" src="images/fashion.jpeg" alt="Card image cap"
+              style="width: 100%; object-fit: cover;">
+            <div class="caption-card">
+              <span class="border">Fashion</span>
+            </div>
+
+            <div class="card-body text-center carousel-caption">
+              <h4 class="card-title">
+                <!-- <a class="bn47" >Button</a> -->
+              </h4>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.google.com/">
+            <img class="card-img-top" src="images/my-favourites.jpeg" alt="Card image cap"
+              style="width: 100%; object-fit: cover;">
+            <div class="caption-card">
+              <span class="border">My Favourites</span>
+            </div>
+
+            <div class="card-body text-center carousel-caption">
+              <h4 class="card-title">
+                <!-- <a class="bn47" >Button</a> -->
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Instagram Feed -->
+
+    <div class="row align-items-center mx-auto" style="padding: 50px 0px 100px;">
+      <!-- style="max-width: 150vh; padding: 50px 0px 100px;" -->
+      <div class="col-md dropdown-divider"></div>
+      <div class="col-md-auto">
+        <h1 style="color: #6c757d;">Instagram</h2>
+      </div>
+      <div class="col-md dropdown-divider"></div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-center align-items-center">
+      <h2 style="color: #686868;">- Section Coming Soon -</h2>
+    </div>
+
+
+
+    <!-- YouTube Feed -->
+    <div class="row align-items-center mx-auto" style="padding: 50px 0px 100px;">
+      <div class="col dropdown-divider"></div>
+      <div class="col-auto">
+        <h1 style="color: #6c757d;">YouTube</h2>
+      </div>
+      <div class="col dropdown-divider"></div>
+    </div>
+
+
+    <!-- <div class="container-fluid"> -->
+    <div class="d-flex flex-row justify-content-center align-items-center">
+      <iframe ma-width="640vw" max-height="360vh"
+        src="https://www.youtube.com/embed?listType=playlist&list=UUFmVSV6nTYgUBM3FNNo1gEg">
+      </iframe>
+      <div class="col-auto"></div>
+      <iframe max-width="640vw" max-height="360vh"
+        src="https://www.youtube.com/embed?listType=playlist&list=UUFmVSV6nTYgUBM3FNNo1gEg&index=2">
+      </iframe>
+    </div>
+
+
+
+
+    <!-- Tiktok Feed -->
+    <section id="tiktok">
+      <div class="row align-items-center mx-auto" style="padding: 50px 0px 50px;">
+        <div class="col dropdown-divider"></div>
+        <div class="col-auto">
+          <h1 style="color: #6c757d;">Tiktok</h2>
+        </div>
+        <div class="col dropdown-divider"></div>
+      </div>
+
+      <!-- <div class="container-fluid"> -->
+
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lunapeech_vlogs" data-unique-id="lunapeech_vlogs"
+        data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+        <section> <a target="_blank"
+            href="https://www.tiktok.com/@lunapeech_vlogs?refer=creator_embed">@lunapeech_vlogs</a> </section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+
+
+    </section>
+
+
+    <!-- <section class="pt-5">
+    <header class="text-center">
+      <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
+      <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
+    </header>
+    <div class="row">
+      <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid"
+            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-1.7570d55a.jpg" alt="" /><strong
+            class="category-item-title">Clothes</strong></a>
+      </div>
+      <div class="col-md-4"><a class="category-item mb-4" href="shop.html"><img class="img-fluid"
+            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-2.1b2e51d9.jpg" alt="" /><strong
+            class="category-item-title">Shoes</strong></a><a class="category-item" href="shop.html"><img
+            class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-3.49411dee.jpg"
+            alt="" /><strong class="category-item-title">Watches</strong></a>
+      </div>
+      <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid"
+            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-4.5db5d5ec.jpg" alt="" /><strong
+            class="category-item-title">Electronics</strong></a>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+  </div>
+
+
+  <!-- Test cards -->
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+
+
+  <footer class="footer-container">
+    <div class=" container-fluid mx-auto">
+      <div class="row align-items-center mx-auto" style="max-width: 100vh; padding: 10px 0px 50px;">
+        <h1>Contact Form</h1>
+      </div>
+      <div class="container-fluid mx-auto" style="max-height: 90vh; max-width: 100vh; max-height: 500px;">
+
+        <section id="contact">
+          <form name="contactform" id="contactform" enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
+            target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="fields">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="entry.811665510" id="name" placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="entry.909384532" id="email"
+                  placeholder="name@example.com" />
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="message">Example textarea</label>
+              <textarea class="form-control" name="entry.2137563631" id="message" rows="6"></textarea>
+            </div>
+            <input type="submit" value="Send Message" class="primary" />
+            <input type="reset" value="Clear" />
+
+            <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        </section>
+
+
+
+      </div>
+
+      <div class="row" style="background-color: #d7be69; padding: 10px 20px;">
+        <div class="col-6">
+          <p style="color: #333333d8;">
+            © 2023 | Luna Peech</p>
+        </div>
+        <div class="col-6">
+          <span class="float-right">
+
+            <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="contact.html"
+              role="button"><i class="fab fa-github"></i></a>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+
+
 </body>
+
 </html>
