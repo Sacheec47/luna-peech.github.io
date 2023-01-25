@@ -310,6 +310,7 @@ textarea {
 	-ms-appearance: none;
 	appearance: none;
 	background: rgba(212, 212, 255, 0.035);
+  /* background-color:  rgba(212, 212, 255, 0.035); */
 	border: none;
 	border-radius: 0;
 	color: inherit;
@@ -318,7 +319,10 @@ textarea {
 	padding: 0 1em;
 	text-decoration: none;
 	width: 100%;
+  color: #ddd;
 }
+
+
 input[type="text"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
@@ -339,8 +343,22 @@ input[type="url"]:focus,
 select:focus,
 textarea:focus {
 	border-color: #9bf1ff;
-	box-shadow: 0 0 0 2px #9bf1ff;
+	/* box-shadow: 0 0 0 2px #9bf1ff; */
   background-color: #fff;
+  color: #6c757d;
+}
+
+label {
+  color: #fff;
+
+}
+
+.footer-container-bg {
+  background: xxx;
+}
+
+.submitmsg{
+  color: #ddd;
 }
 
   .caption-card {

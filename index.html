@@ -366,47 +366,59 @@
 
   <!-- Test cards -->
 
-  <div class="container-fluid" style="background-color: #081624">
-    <section id="contact">
-      <div class="row align-items-center mx-auto" style="padding: 30px 0px 00px;">
-      </div>
+  <div class="container-fluid" style="background-color: #081624;">
+    <div class="container">
+      <section id="contact">
+        <div class="row align-items-center mx-auto" style="padding: 30px 0px 00px;">
+        </div>
 
 
-      <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com/"
-        target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;">
-        <!-- <form name="contactform" id="contactform" enctype="text/plain"
+        <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com/"
+          target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;">
+          <!-- <form name="contactform" id="contactform" enctype="text/plain"
         action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
         target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;"> -->
-        <div class="row align-items-center mx-auto" style="padding: 40px 0px 50px;">
-          <div class="hr-sect2">
-            <h1>Contact Me</h1>
+          <div class="row align-items-center mx-auto" style="padding: 40px 0px 50px;">
+
+            <h1 style="color: #fff;">Contact Me</h1>
+
           </div>
-        </div>
-        <div class="fields">
+          <div class="form-row"></div>
+          <div class="fields">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="entry.811665510" id="name" placeholder="Your Name" />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="entry.909384532" id="email"
+                  placeholder="name@example.com" />
+              </div>
+            </div>
+
+
+          </div>
+
+
+
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="entry.811665510" id="name" placeholder="Your Name" />
+            <label for="message">Message</label>
+            <textarea name="entry.2137563631" id="message" rows="6"></textarea>
           </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" name="entry.909384532" id="email" placeholder="name@example.com" />
-          </div>
+          <input type="submit" value="Send Message" class="primary" />
+          &nbsp;
+          <input type="reset" value="Clear" />
 
-        </div>
-        <div class="form-group">
-          <label for="message">Example textarea</label>
-          <textarea  name="entry.2137563631" id="message" rows="6"></textarea>
-        </div>
-        <input type="submit" value="Send Message" class="primary" />
-        <input type="reset" value="Clear" />
+          <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-        <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
-      </form>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        <!-- <a href="/buttons/8"><button class="bn8"><i className="fa fa-home"></i> Home</button></a> -->
 
-      <!-- <a href="/buttons/8"><button class="bn8"><i className="fa fa-home"></i> Home</button></a> -->
+      </section>
 
-    </section>
+    </div>
   </div>
 
 
@@ -420,43 +432,48 @@
   <!-- Footer -->
 
 
-  <footer class="footer-container">
-    <div class=" container-fluid mx-auto">
-
-      <div class="row" style="background-color: #d7be69; padding: 10px 20px;">
-        <div class="col-6">
-          <p style="color: #333333d8;">
-            © 2023 | Luna Peech</p>
-        </div>
-        <div class="col-6">
-          <span class="float-right">
-
-            <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
-                class="fab fa-facebook-f"></i></a>
-
-            <!-- Twitter -->
-            <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
-                class="fab fa-twitter"></i></a>
-
-            <!-- Google -->
-            <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
-                class="fab fa-google"></i></a>
-
-            <!-- Instagram -->
-            <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
-                class="fab fa-instagram"></i></a>
-
-            <!-- Linkedin -->
-            <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
-                class="fab fa-linkedin-in"></i></a>
-            <!-- Github -->
-            <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="contact.html"
-              role="button"><i class="fab fa-github"></i></a>
-          </span>
-        </div>
-
+  <footer class="footer-container bg-white" >
+    <div class="container" >
+      <div class="row">
+      <div class="col-xl-9 col-lg-8 col-md-7 order-md-1 order-2">
+      <img src="img/logo-dark.png" alt="" class="footer-logo">
+      <div class="copyright">
+        Luna Peech | Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved.
+      
       </div>
-    </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-5 order-md-2 order-1">
+      <ul class="list-unstyled">
+        <br>
+      <!-- Social 1 -->
+      <li><a href="https://github.com/Kavishika-Kahandawala" class="fa-brands fa-instagram"
+        title="Instagram">
+      </a>
+      <span class="label">@luna_peech</span>
+    </li>
+    <!-- Social 2 -->
+    <li><a href="https://www.facebook.com/lunapeech/" class="fa-brands fa-facebook"
+        title="Facebook">
+      </a>
+      <span class="label">&nbsp&nbsp&nbspLuna Peech</span>
+    </li>
+    <!-- Social 3 -->
+    <li><a href="https://www.tiktok.com/@lunapeech_vlogs" class="fa-brands fa-tiktok"
+        title="TikTok">
+      </a>
+      <span class="label">@lunapeech_vlogs</span>
+    </li>
+    <!-- Social 4 -->
+    <li><a href="mailto:someone@example.com" class="fa-solid fa-envelope"
+        title="E-mail">
+        <!-- fa-2x -->
+      </a>
+      <span class="label">&nbsp&nbsp&nbspE-mail</span>
+    </li>
+      </ul>
+      </div>
+      </div>
+      </div>
   </footer>
 
   <!-- Scripts -->
@@ -472,7 +489,7 @@
   <script type="text/javascript">
     $('#contactform').on('submit', function (e) {
       $('#contactform *').fadeOut(2000);
-      $('#contactform').prepend('Your submission has been processed');
+      $('#contactform').prepend('<div class="submitmsg">Your submission has been processed</div>');
     });
   </script>
   <script>
