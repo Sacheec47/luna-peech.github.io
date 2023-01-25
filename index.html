@@ -358,7 +358,7 @@
      </section> -->
 
 
-    
+
 
 
   </div>
@@ -366,18 +366,22 @@
 
   <!-- Test cards -->
 
-  <div class="container-fluid" style="background-color: aliceblue;">
+  <div class="container-fluid" style="background-color: #081624">
     <section id="contact">
-      <div class="row align-items-center mx-auto" style="padding: 40px 0px 50px;">
-        <div class="hr-sect2">
-          <h1>Contact Me</h1>
-        </div>
+      <div class="row align-items-center mx-auto" style="padding: 30px 0px 00px;">
       </div>
 
 
-      <form name="contactform" id="contactform" enctype="text/plain"
-        action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
+      <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com/"
         target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;">
+        <!-- <form name="contactform" id="contactform" enctype="text/plain"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
+        target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;"> -->
+        <div class="row align-items-center mx-auto" style="padding: 40px 0px 50px;">
+          <div class="hr-sect2">
+            <h1>Contact Me</h1>
+          </div>
+        </div>
         <div class="fields">
           <div class="form-group">
             <label for="name">Name</label>
@@ -385,13 +389,13 @@
           </div>
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" name="entry.909384532" id="email" placeholder="name@example.com" />
+            <input type="email" name="entry.909384532" id="email" placeholder="name@example.com" />
           </div>
 
         </div>
         <div class="form-group">
           <label for="message">Example textarea</label>
-          <textarea class="form-control" name="entry.2137563631" id="message" rows="6"></textarea>
+          <textarea  name="entry.2137563631" id="message" rows="6"></textarea>
         </div>
         <input type="submit" value="Send Message" class="primary" />
         <input type="reset" value="Clear" />
@@ -400,6 +404,7 @@
       </form>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
+      <!-- <a href="/buttons/8"><button class="bn8"><i className="fa fa-home"></i> Home</button></a> -->
 
     </section>
   </div>
@@ -454,7 +459,22 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript">var submitted = false;</script>
+  <script type="text/javascript">
+    $('#contactform').on('submit', function (e) {
+      $('#contactform *').fadeOut(2000);
+      $('#contactform').prepend('Your submission has been processed');
+    });
+  </script>
   <script>
     $(document).ready(function () {
       // Add smooth scrolling to all links
