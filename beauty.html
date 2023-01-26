@@ -48,23 +48,126 @@
       text-decoration: none;
     }
 
-    /* .container-fluid {
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: auto;
-      margin-left: auto
-    } */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%;
+      /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      vertical-align: bottom;
+      width: 100%;
+      object-fit: cover;
+      height: 50vh;
+
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
 
 
-    /* .card-img-top:hover {
-      background-color: #ccc;
-    } */
+
+
+    /* sds */
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+
+    /* relevant styles */
+    .img_wrap {
+      margin-top: 8px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .img_img {
+      vertical-align: middle;
+    }
+
+    .img_description_layer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(36, 62, 206, 0.6);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* transition effect. not necessary */
+      transition: opacity .2s, visibility .2s;
+    }
+
+    .img_wrap:hover .img_description_layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .img_description {
+      transition: .2s;
+      transform: translateY(1em);
+      text-align: center;
+    }
+
+    .img_wrap:hover .img_description {
+      transform: translateY(0);
+    }
   </style>
 
 
 </head>
 
-<body class="body bg-dark">
+<body class="body bg-light">
   <!-- <div class="container-fluid"></div> -->
 
   <header>
@@ -124,7 +227,7 @@
 
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
-            alt="Generic placeholder image" src="images/about me.jpg" height="400vh">
+            alt="Generic placeholder image" src="images/about me.webp" height="400vh">
         </div>
 
       </div>
@@ -141,7 +244,7 @@
       </p>
     </div>
     <div class="col-md-2">
-      <img src="images/about me.jpg" class="card-img" alt="..." style="object-fit: cover;">
+      <img src="images/about me.webp" class="card-img" alt="..." style="object-fit: cover;">
     </div>
   </div> -->
 
@@ -170,38 +273,223 @@
   </section> -->
   <!-- A Banner -->
 
-  <div class="container">
+  <div class="container" style="padding-bottom: 50px;">
     <section id="beauty-grid">
-      <!-- Gallery -->
-      <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
-        </div>
-
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
-        </div>
-
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
-
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-            class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
-        </div>
+      <div class="row align-items-center mx-auto" style="padding: 50px 0px 10px;">
+      <div class="hr-sect">
+        <h1>View Products</h1>
       </div>
-      <!-- Gallery -->
+    </div>
+      <div class="row align-items-center mx-auto">
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+      </div>
     </section>
+
 
 
 

@@ -15,7 +15,7 @@ html {
 
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.226)), url("../../images/homepage_banner.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.226)), url("../../images/homepage_banner.webp");
     height: 80%;
     background-position: center;
     background-repeat: no-repeat;
