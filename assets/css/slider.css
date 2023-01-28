@@ -76,7 +76,7 @@
 
 .car-text {
   color: rgb(255, 255, 255);
-  letter-spacing: 10px;
+  /* letter-spacing: 0.2em; */
   font-size: 25px;
   text-align: center;
 }
