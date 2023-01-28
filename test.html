@@ -55,10 +55,48 @@
       margin-left: auto
     } */
 
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image-gallery>li {
+      height: 300px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .image-gallery li img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      border-radius: 5px;
+    }
+
+    .maintxt {
+      position: relative;
+    }
+
+    .maintxt>img,
+    .overlay-text {
+      position: absolute;
+    }
 
     /* .card-img-top:hover {
       background-color: #ccc;
     } */
+
+    .caption-2 figcaption {
+  width: 80%;
+  position: absolute;
+  /* bottom: 1rem; */
+  top: 40%;
+  left: 10%;
+  /* left: 10%; */
+  background: rgba(255, 255, 255, 0.6);
+}
   </style>
 
 
@@ -68,57 +106,56 @@
   <!-- <div class="container-fluid"></div> -->
 
 
- 
+
 
   <div class="container">
 
-    
 
-<!-- Gallery -->
-<div class="row">
-  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
+          <div class="maintxt">
+            <img src="images/homepage_banner.webp" class="img-responsive" height="500px">
+            <span class="overlay-text" style="background-color: aqua;"><div class="d-flex p-2 bd-highlight flex-grow">I'm a flexbox container!</div></span>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
+    <div class="row py-5">
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
+      <div class="col-lg-4">
+        <figure class="caption-2 mb-0 shadow-sm border border-white border-md">
+          <img src="https://i.postimg.cc/pTkkKvN6/14.jpg" alt="" class="w-100">
+          <figcaption class="p-4 bg-white">
+            <h2 class="h5 font-weight-bold mb-2 font-italic">Image Caption</h2>
+            <p class="mb-0 text-small font-italic text-muted">Lorem ipsum dolor sit amet, consect adipisicing elit.</p>
+          </figcaption>
+        </figure>
+      </div>
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
+      <div class="col-lg-4">
+        <figure class="caption-2 mb-0 shadow-sm border border-white border-md">
+          <img src="https://i.postimg.cc/sgRHWsv3/16.jpg" alt="" class="w-100">
+          <figcaption class="p-4 bg-white">
+            <h2 class="h5 font-weight-bold mb-2 font-italic">Image Caption</h2>
+            <p class="mb-0 text-small font-italic text-muted">Lorem ipsum dolor sit amet, consect adipisicing elit.</p>
+          </figcaption>
+        </figure>
+      </div>
 
-    <img
-      src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
-</div>
-<!-- Gallery -->
+      <div class="col-lg-4">
+        <figure class="caption-2 mb-0 shadow-sm border border-white border-md">
+          <img src="https://i.postimg.cc/TwhtxPHJ/18.jpg" alt="" class="w-100">
+          <figcaption class="p-4 bg-white">
+            <h2 class="h5 font-weight-bold mb-2 font-italic">Image Caption</h2>
+            <p class="mb-0 text-small font-italic text-muted">Lorem ipsum dolor sit amet, consect adipisicing elit.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="separator my-2"></div>
 
 
   </div>
