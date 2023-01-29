@@ -11,8 +11,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/slider.css" />
-
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js">
@@ -50,17 +48,120 @@
       text-decoration: none;
     }
 
-    /* .container-fluid {
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: auto;
-      margin-left: auto
-    } */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%;
+      /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      vertical-align: bottom;
+      width: 100%;
+      object-fit: cover;
+      height: 50vh;
+
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
 
 
-    /* .card-img-top:hover {
-      background-color: #ccc;
-    } */
+
+
+    /* sds */
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+
+    /* relevant styles */
+    .img_wrap {
+      margin-top: 8px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .img_img {
+      vertical-align: middle;
+    }
+
+    .img_description_layer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(36, 62, 206, 0.6);
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* transition effect. not necessary */
+      transition: opacity .2s, visibility .2s;
+    }
+
+    .img_wrap:hover .img_description_layer {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .img_description {
+      transition: .2s;
+      transform: translateY(1em);
+      text-align: center;
+    }
+
+    .img_wrap:hover .img_description {
+      transform: translateY(0);
+    }
   </style>
 
 
@@ -99,7 +200,7 @@
 </main>    -->
   <div class="hero-image">
     <div class="hero-text">
-      <h1 style="font-size:60px; letter-spacing: 10px;">LUNA &nbspPEECH</h1>
+      <h1 style="font-size:60px">Luna Peech</h1>
       ( Under Development )
       <!-- <p>Content creator</p>
       <a href="#about-me" class="btn41-43 btn-41">
@@ -172,173 +273,225 @@
   </section> -->
   <!-- A Banner -->
 
-  <div class="container">
-
-    <section id="catogries">
-
-      <!-- <hr class="divider" style="max-width: 150vh; padding: 50px 0px;"> -->
+  <div class="container" style="padding-bottom: 50px;">
+    <section id="beauty-grid">
       <div class="row align-items-center mx-auto" style="padding: 50px 0px 10px;">
-        <div class="hr-sect">
-          <h1>Categories</h1>
-        </div>
-      </div>
-
-      <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-          <div class="carousel-item active col-md-4">
-            <figure class="caption-sliders mb-0 shadow-sm ">
-              <a href="#">
-                <img src="images/beauty.webp" alt="" class="car-image w-100">
-                <figcaption class="p-4">
-                  <span class="car-text">Beauty</span>
-                  <p class="mb-0 text-small font-italic text-muted"></p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="carousel-item col-md-4">
-            <figure class="caption-sliders mb-0 shadow-sm ">
-              <a href="#">
-                <img src="images/fashion.webp" alt="" class="car-image w-100">
-                <figcaption class="p-4">
-                  <span class="car-text">Fashion</span>
-                  <p class="mb-0 text-small font-italic text-muted"></p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="carousel-item col-md-4">
-            <figure class="caption-sliders mb-0 shadow-sm ">
-              <a href="#">
-                <img src="images/my-favourites.webp" alt="" class="car-image w-100">
-                <figcaption class="p-4">
-                  <span class="car-text">Favourites</span>
-                  <p class="mb-0 text-small font-italic text-muted"></p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-          <div class="carousel-item col-md-4">
-            <figure class="caption-sliders mb-0 shadow-sm ">
-              <a href="#">
-                <img src="images/homepage_banner.webp" alt="" class="car-image w-100">
-                <figcaption class="p-4">
-                  <span class="car-text">Gaming </span>
-                  <p class="mb-0 text-small font-italic text-muted"></p>
-                </figcaption>
-              </a>
-            </figure>
-          </div>
-
-        </div>
-        <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-
-    </section>
-
-    <!-- Instagram Feed -->
-
-    <div class="row align-items-center mx-auto" style="padding: 50px 0px 100px;">
       <div class="hr-sect">
-        <h1>Instagram</h1>
+        <h1>View Products</h1>
       </div>
-
-      <!-- style="max-width: 150vh; padding: 50px 0px 100px;" -->
-
-
     </div>
-
-    <!-- <div class="d-flex flex-row justify-content-center align-items-center">
-      <h2 style="color: #686868;">- Section Coming Soon -</h2>
-    </div> -->
-    <!-- <div class="embedsocial-hashtag" data-ref="e3062a2aca0782ba3de210d587c2c68d59de6d99"><a
-        class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/"
-        target="_blank" title="Widget by EmbedSocial">Widget by EmbedSocial<span>→</span></a></div>
-    <script>(function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));</script> -->
-
-    <div data-mc-src="77c78d24-bb37-46b3-8bcb-9b06b4b4f901#null"></div>
-        
-<script 
-  src="https://cdn2.woxo.tech/a.js#63c939b2095e5542755da4e2" 
-  async data-usrc>
-</script>
-    <!-- YouTube Feed -->
-    <section id="youtube">
-      <div class="row align-items-center mx-auto" style="padding: 50px 0px 100px;">
-        <div class="hr-sect">
-          <h1>YouTube</h1>
+      <div class="row align-items-center mx-auto">
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="column">
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/about me.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/fashion.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/beauty.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_wrap">
+              <img src="images/lifestyle.webp" style="width:100%">
+              <div class="img_description_layer">
+                <p class="img_description">This image looks super neat.</p>
+              </div>
+            </div>
+          </a>
+        </div>
 
 
-      <!-- <div class="container-fluid"> -->
-      <div class="d-flex flex-row justify-content-center align-items-center">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUFmVSV6nTYgUBM3FNNo1gEg">
-          </iframe>
-        </div>
-        <div class="col-auto"></div>
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUFmVSV6nTYgUBM3FNNo1gEg&index=2">
-          </iframe>
-        </div>
+
       </div>
     </section>
 
 
 
-
-    <!-- Tiktok Feed -->
-    <section id="tiktok">
-      <div class="row align-items-center mx-auto" style="padding: 50px 0px 50px;">
-        <div class="hr-sect">
-          <h1>TikTok</h1>
-        </div>
-      </div>
-
-      <!-- <div class="container-fluid"> -->
-
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lunapeech_vlogs" data-unique-id="lunapeech_vlogs"
-        data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
-        <section> <a target="_blank"
-            href="https://www.tiktok.com/@lunapeech_vlogs?refer=creator_embed">@lunapeech_vlogs</a> </section>
-      </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
-
-
-    </section>
-
-
-    <!-- <section class="pt-5">
-    <header class="text-center">
-      <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
-      <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
-    </header>
-    <div class="row">
-      <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid"
-            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-1.7570d55a.webp" alt="" /><strong
-            class="category-item-title">Clothes</strong></a>
-      </div>
-      <div class="col-md-4"><a class="category-item mb-4" href="shop.html"><img class="img-fluid"
-            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-2.1b2e51d9.webp" alt="" /><strong
-            class="category-item-title">Shoes</strong></a><a class="category-item" href="shop.html"><img
-            class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-3.49411dee.webp"
-            alt="" /><strong class="category-item-title">Watches</strong></a>
-      </div>
-      <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid"
-            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/cat-img-4.5db5d5ec.webp" alt="" /><strong
-            class="category-item-title">Electronics</strong></a>
-      </div>
-    </div>
-     </section> -->
 
 
 
@@ -347,7 +500,7 @@
   </div>
 
 
-  <!-- Contact -->
+  <!-- Test cards -->
 
   <div class="container-fluid" style="background-color: #081624;">
     <div class="container">
@@ -356,7 +509,7 @@
         </div>
 
 
-        <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
+        <form name="contactform" id="contactform" enctype="text/plain" action="https://docs.google.com/"
           target="hidden_iframe" onsubmit="submitted=true;" style="padding-bottom: 50px;">
           <!-- <form name="contactform" id="contactform" enctype="text/plain"
         action="https://docs.google.com/forms/d/e/1FAIpQLSe3Vt2HA7Zb2RrPuMUQOTniRiRSDCL8yzn21m9diMLFTWEUhg/formResponse?usp=pp_url"
@@ -436,7 +589,7 @@
                 <a href="mailto:someone@example.com" class="fa-solid fa-envelope fa-1x text-reset" title="E-mail"></a>
                 <!-- <span>Mail : </span>  -->
 
-                <a href="mailto:luna.peech@gmail.com">&nbsp; luna.peech@gmail.com</a>
+                <a href="mailto:someone@example.com">&nbsp; example@contact.com</a>
               </div>
             </li>
             <br>
@@ -465,7 +618,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/slider.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
